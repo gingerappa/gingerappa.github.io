@@ -1,6 +1,6 @@
 //import './style.css'
 
-//import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
+import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 //import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
 //import { Vector3 } from 'three';
