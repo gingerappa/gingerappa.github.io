@@ -64,5 +64,6 @@ import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 //-14 sep 9:30-13:00`);
 //}
 
-run()
+//run()
+console.log("main.js working")
 
