@@ -1,9 +1,10 @@
 //import './style.css'
 
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
+import { Vector3 } from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 //import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
-//import { Vector3 } from 'three';
+
 
 //textures
 const earthTexture = new THREE.TextureLoader().load('img/earthTX.jpg')
@@ -11,24 +12,25 @@ const earthNormal = new THREE.TextureLoader().load('img/earthNM.jpg')
 
 //setting everything up
 const scene = new THREE.Scene(); //scene
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000); //camera
+const camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1, 1000); //camera
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'), // renderer
 });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.set(10, 0, 23);
+camera.position.set(58,-22,67);
 
 
 // adding objects
 const earth = new THREE.Mesh(
     new THREE.SphereGeometry(14, 100, 100),
-    new THREE.MeshStandardMaterial({map: earthTexture, wireframe: false, normalMap: earthNormal})
-)
-earth.rotation.z += 0.1;
-earth.rotation.x = 0.3
-earth.rotation.y -= 2
+    new THREE.MeshStandardMaterial({map: earthTexture, wireframe: false, normalMap: earthNormal}))
+const mars = new THREE.Mesh(
+  new THREE.SphereGeometry(14, 100, 100),
+  new THREE.MeshStandardMaterial({map: earthTexture, wireframe: false, normalMap: earthNormal}))
+earth.rotation.set(0.3, 2, 0.1)
 
+var planetsLoc = [new Vector3(10, 0, 27), new Vector3(58, 22, 67)]
 scene.add(earth);
 
 
@@ -52,10 +54,60 @@ function run(){
   requestAnimationFrame(run)
 
   earth.rotation.y += 0.0005
-  console.log(camera.position)
   
   renderer.render(scene, camera);
 }
+
+function switchPlanet(directions){
+  if (directions == "left"){
+    planetsLoc.unshift(planetsLoc[planetsLoc.length - 1])
+    planetsLoc.splice(planetsLoc.length - 1, 1)
+  }
+  else{
+    planetsLoc.push(planetsLoc[0])
+    planetsLoc.splice(0, 1)
+  }
+  console.log(planetsLoc)
+  camera.position.set(planetsLoc[0])
+}
+document.getElementById("left").onclick = function() {switchPlanet("left")};
+document.getElementById("right").onclick = function() {switchPlanet("right")};
+
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+  switch (event.key) {
+    case "ArrowDown":
+      camera.position.x += 0.1
+      break;
+    case "ArrowUp":
+      camera.position.x -= 0.1
+      break;
+    case "ArrowLeft":
+      camera.position.y += 0.1
+      break;
+    case "ArrowRight":
+      camera.position.y -= 0.1
+      break;
+    case " ":
+      camera.position.z += 0.5
+      break;
+    case "Shift":
+      camera.position.z -= 0.5
+      break;
+    default:
+      console.log(event.key)
+      return; // Quit when this doesn't handle the key event.
+    }
+  console.log(camera.position)
+  event.preventDefault();
+}, true);
+
+
+
+
+
 
 function agenda(){
   console.log(`-7  sep
