@@ -37,7 +37,7 @@ earth.rotation.set(0.3, 2, 0.1)
 mars.position.set(48, -22, 40)
 mars.rotation.set(0.3, 2, 0.1)
 
-var planetsLoc = [[10, 0, 27], [58, -22, 67]]
+var planetsLoc = [[10, 0, 27], [58, -22, 67], [100, 10, 100]]
 scene.add(earth,mars);
 
 
@@ -97,7 +97,7 @@ function move(object, newPosition, step){
         log[0] = false
         if(log.length != 1){
           move(log[1][0], log[1][1], log[1][2])
-          log.pop(1)
+          log.splice(1, 1)
         }
       }
     }
