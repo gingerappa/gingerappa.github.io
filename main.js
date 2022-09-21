@@ -37,7 +37,7 @@ earth.rotation.set(0.3, 2, 0.1)
 mars.position.set(48, -22, 40)
 mars.rotation.set(0.3, 2, 0.1)
 
-var planetsLoc = [[10, 0, 27], [58, -22, 67], [100, 10, 100]]
+var planetsLoc = [[10, 0, 27], [58, -22, 67]]
 scene.add(earth,mars);
 
 
@@ -62,6 +62,9 @@ function run(){
 
   earth.rotation.y += 0.0005
   mars.rotation.y += 0.001
+  console.log(camera.fov)
+  //camera.fov += 1
+  camera.updateProjectionMatrix();
 
   renderer.render(scene, camera);
 }
