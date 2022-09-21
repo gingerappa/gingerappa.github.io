@@ -9,6 +9,7 @@ import { Vector3 } from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 let log = [false];
 
 //textures
+const spaceTexture = new THREE.TextureLoader().load('img/spaceTX.jpg')
 const earthTexture = new THREE.TextureLoader().load('img/earthTX.jpg')
 const earthNormal = new THREE.TextureLoader().load('img/earthNM.jpg')
 const marsTexture = new THREE.TextureLoader().load('img/marsTX.jpg')
@@ -53,8 +54,10 @@ scene.add(lightE, ambientLight)
 // const gridHelper = new THREE.GridHelper(200, 50);
 // scene.add(lightHelper, gridHelper)
 
-// const controls = new OrbitControls(camera, renderer.domElement)
+//const controls = new OrbitControls(camera, renderer.domElement)
 // controls.target = new Vector3 (10, 0, -4)
+
+console.log(camera)
 
 //main loop
 function run(){
@@ -62,9 +65,6 @@ function run(){
 
   earth.rotation.y += 0.0005
   mars.rotation.y += 0.001
-  console.log(camera.fov)
-  //camera.fov += 1
-  camera.updateProjectionMatrix();
 
   renderer.render(scene, camera);
 }
@@ -88,16 +88,27 @@ function move(object, newPosition, step){
     log[0] = true
     var positionObject = object.position
     var steps = [getDifference(positionObject.x, newPosition[0])/step, getDifference(positionObject.y, newPosition[1])/step, getDifference(positionObject.z, newPosition[2])/step]
+    var fovStep = 120/step
     var count = 0
     function test(){
       if(count <= step){
-        count ++;
         var positionObject = object.position
         object.position.set(positionObject.x + steps[0], positionObject.y + steps[1], positionObject.z + steps[2])
+        if(count < step/2){
+          camera.fov += fovStep
+          camera.updateProjectionMatrix();
+        }
+        else{
+          camera.fov -= fovStep
+        }
+        count ++;
+        camera.updateProjectionMatrix();
         requestAnimationFrame(test)
       }
       else{
         log[0] = false
+        camera.fov = 60
+        camera.updateProjectionMatrix();
         if(log.length != 1){
           move(log[1][0], log[1][1], log[1][2])
           log.splice(1, 1)
@@ -120,10 +131,8 @@ function switchPlanet(directions){
     planetsLoc.push(planetsLoc[0])
     planetsLoc.splice(0, 1)
   }
-  move(camera, planetsLoc[0], 60)
+  move(camera, planetsLoc[0], 120)
 }
-document.getElementById("left").onclick = function() {switchPlanet("left")};
-document.getElementById("right").onclick = function() {switchPlanet("right")};
 
 window.addEventListener("keydown", function (event) {
   if (event.defaultPrevented) {
@@ -142,16 +151,20 @@ window.addEventListener("keydown", function (event) {
   event.preventDefault();
 }, true);
 
-
-
-
-
-
-function agenda(){
-  console.log(`-7  sep
--13 sep 13:30-17:00
--14 sep 9:30-13:00`);
+function addStar(origin){
+  console.log(origin)
+  const star = new THREE.Mesh(
+    new THREE.SphereGeometry(0.25, 24, 24),
+    new THREE.MeshStandardMaterial({color: 0xffffff})
+  )
+  const [x, y, z] = [THREE.MathUtils.randFloat(0, 100)-origin[0], THREE.MathUtils.randFloat(0, 100)-origin[1], THREE.MathUtils.randFloat(0, 100)-origin[2]]
+  star.position.set(x,y,z)
+  scene.add(star)
 }
+
+document.getElementById("left").onclick = function() {switchPlanet("left")};
+document.getElementById("right").onclick = function() {switchPlanet("right")};
+//scene.background = spaceTexture
 
 run()
 console.log("main.js working")
