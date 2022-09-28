@@ -11,7 +11,17 @@ canvas {
   left: 0;
 }
 
-
+h1 {
+  font-family: brandon-grotesque, sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: normal;
+  line-height: 100px;
+  text-transform: uppercase;
+  color: #d6d6d6;
+  text-align: center;
+}
 
 
 main {
