@@ -10,18 +10,8 @@ canvas {
   top: 0;
   left: 0;
 }
-:root {
-  --dark-bg: rgba(15, 15, 15, 0.95);
-  --spacing: 350px;
 
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
-.container, .container-sm {
-  max-width: 100%;
-}
 
 
 main {
@@ -29,51 +19,3 @@ main {
   padding: 0%;
 }
 
-h1{
-  font-family: brandon-grotesque, sans-serif;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 900;
-  letter-spacing: normal;
-  line-height: 100px;
-  text-transform: uppercase;
-  color: #d6d6d6;
-  text-align: center;
-  }
-  
-button {
-  background-color:var(--dark-bg);
-  display:inline-block;
-  cursor:pointer;
-  color:#ffffff;
-  font-family:Impact;
-  font-size:28px;
-  padding:32px 15px;
-  text-decoration:none;
-  width: 50px;
-}
-
-
-
-
-blockquote {
-  font-family: brandon-grotesque, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: normal;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #6A6A6A;
-  }
-  header {
-    background: var(--dark-bg);
-  }
-
-  blockquote p {
-    color: black;
-    background-color: white;
-    font-size: 4rem;
-    display: inline;
-    line-height: 1;
-  }
