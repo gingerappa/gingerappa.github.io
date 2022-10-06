@@ -22,10 +22,24 @@ h1 {
   color: #d6d6d6;
   text-align: center;
 }
-
-
 main {
   position: absolute;
   padding: 0%;
+}
+#leftB{
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 99%;
+  height: 98%;
+}
+#rightB{
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 99%;
+  height: 98%;
 }
 

@@ -2,11 +2,13 @@
 
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 import { Vector3 } from 'https://unpkg.com/three@0.127.0/build/three.module.js';
+import * as data from './json/html.json';
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 //import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
 
 //variables
 let log = [false];
+const body = document.getElementById("body");
 
 //textures
 const spaceTexture = new THREE.TextureLoader().load('img/spaceTX.jpg')
@@ -38,7 +40,7 @@ earth.rotation.set(0.3, 2, 0.1)
 mars.position.set(48, -22, 40)
 mars.rotation.set(0.3, 2, 0.1)
 
-var planetsLoc = [[10, 0, 27], [58, -22, 67]]
+var PageCord = [[10, 0, 27, "homePage"], [58, -22, 67, "Year1Home"]]
 scene.add(earth,mars);
 
 
@@ -57,7 +59,6 @@ scene.add(lightE, ambientLight)
 //const controls = new OrbitControls(camera, renderer.domElement)
 // controls.target = new Vector3 (10, 0, -4)
 
-console.log(camera)
 
 //main loop
 function run(){
@@ -82,6 +83,12 @@ function getDifference(a, b){
     }
   }
 }
+function loadPage(pageName){
+  console.log(data.html[pageName])
+  body.innerHTML = data.html[pageName]
+  document.getElementById("left").onclick = function() {switchPlanet("left")};
+  document.getElementById("right").onclick = function() {switchPlanet("right")};
+}
 
 function move(object, newPosition, step){
   if(!log[0]){
@@ -94,20 +101,11 @@ function move(object, newPosition, step){
       if(count <= step){
         var positionObject = object.position
         object.position.set(positionObject.x + steps[0], positionObject.y + steps[1], positionObject.z + steps[2])
-        if(count < step/2){
-          camera.fov += fovStep
-          camera.updateProjectionMatrix();
-        }
-        else{
-          camera.fov -= fovStep
-        }
         count ++;
-        camera.updateProjectionMatrix();
         requestAnimationFrame(test)
       }
       else{
         log[0] = false
-        camera.fov = 60
         camera.updateProjectionMatrix();
         if(log.length != 1){
           move(log[1][0], log[1][1], log[1][2])
@@ -124,14 +122,15 @@ function move(object, newPosition, step){
 
 function switchPlanet(directions){
   if (directions == "left"){
-    planetsLoc.unshift(planetsLoc[planetsLoc.length - 1])
-    planetsLoc.splice(planetsLoc.length - 1, 1)
+    PageCord.unshift(PageCord[PageCord.length - 1])
+    PageCord.splice(PageCord.length - 1, 1)
   }
   else{
-    planetsLoc.push(planetsLoc[0])
-    planetsLoc.splice(0, 1)
+    PageCord.push(PageCord[0])
+    PageCord.splice(0, 1)
   }
-  move(camera, planetsLoc[0], 120)
+  loadPage(PageCord[0][PageCord.length+1])
+  move(camera, PageCord[0], 120)
 }
 
 window.addEventListener("keydown", function (event) {
@@ -152,7 +151,6 @@ window.addEventListener("keydown", function (event) {
 }, true);
 
 function addStar(origin){
-  console.log(origin)
   const star = new THREE.Mesh(
     new THREE.SphereGeometry(0.25, 24, 24),
     new THREE.MeshStandardMaterial({color: 0xffffff})
@@ -167,5 +165,4 @@ document.getElementById("right").onclick = function() {switchPlanet("right")};
 //scene.background = spaceTexture
 
 run()
-console.log("main.js working")
 
