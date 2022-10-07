@@ -2,7 +2,7 @@
 
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 import { Vector3 } from 'https://unpkg.com/three@0.127.0/build/three.module.js';
-import * as data from '/html.json';
+//import * as data from '/html.json';
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 //import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
 
@@ -163,7 +163,7 @@ function addStar(origin){
 
 document.getElementById("left").onclick = function() {switchPlanet("left")};
 document.getElementById("right").onclick = function() {switchPlanet("right")};
-//scene.background = spaceTexture
+scene.background = spaceTexture
 
 run()
 
