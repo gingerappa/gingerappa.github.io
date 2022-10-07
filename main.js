@@ -2,9 +2,16 @@
 
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 import { Vector3 } from 'https://unpkg.com/three@0.127.0/build/three.module.js';
-//import * as data from '/html.json';
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-//import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
+
+const data = 
+{"html": 
+  {
+    "homePage" : "<main class='container-fluid text-center'> <div class='row justify-content-end' style='margin-bottom: 250px'> <div class='col col-lg-6 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Thijs Swinkels</h1> </header> </div> </div> </main>", 
+    "Year1Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 1</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Project 1</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Project 2</h1> </button> </div> </main>",
+    "test": ""
+  }
+}
 
 //variables
 let running = false;
