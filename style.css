@@ -31,15 +31,15 @@ main {
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 99%;
-  height: 98%;
+  left: 0;
+  top: calc(50vh - 20px);
 }
 #rightB{
   position: absolute;
   display: flex;
   justify-content: end;
   align-items: center;
-  width: 99%;
-  height: 98%;
+  right: 0;
+  top: calc(50vh - 20px);
 }
 

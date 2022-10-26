@@ -9,6 +9,7 @@ const data =
   {
     "homePage" : "<main class='container-fluid text-center'> <div class='row justify-content-end' style='margin-bottom: 250px'> <div class='col col-lg-6 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Thijs Swinkels</h1> </header> </div> </div> </main>", 
     "Year1Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 1</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Project 1</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Project 2</h1> </button> </div> </main>",
+    "Year2Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 2</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Project 1</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Project 2</h1> </button> </div> </main>",
     "test": ""
   }
 }
@@ -55,7 +56,7 @@ jupiter.position.set(96, -44, 80)
 jupiter.rotation.set(0.3, 2, 0.1)
 
 
-var PageCord = [[10, 0, 27, "homePage"], [58, -22, 67, "Year1Home"], [106, -44, 107, "test"]]
+var PageCord = [[10, 0, 27, "homePage"], [58, -22, 67, "Year1Home"], [106, -44, 107, "Year2Home"]]
 scene.add(earth,mars,jupiter);
 
 
@@ -108,17 +109,20 @@ function loadPage(pageName){
 function move(object, newPosition, step){
   var positionObject = object.position
   var steps = [getDifference(positionObject.x, newPosition[0])/step, getDifference(positionObject.y, newPosition[1])/step, getDifference(positionObject.z, newPosition[2])/step]
-  var fovStep = 120/step
+  var opacityStep = 100/step
+  var opacity = 0
   var count = 0
+  body.style.opacity = 0
   function test(){
     if(count <= step){
       var positionObject = object.position
       object.position.set(positionObject.x + steps[0], positionObject.y + steps[1], positionObject.z + steps[2])
+      opacity += opacityStep
+      body.style.opacity = `${opacity}%`
       count ++;
       requestAnimationFrame(test)
     }
     else{
-      loadPage(PageCord[0][3])
       running = false
     }
   }
@@ -137,7 +141,7 @@ function switchPlanet(directions){
       PageCord.splice(0, 1)
     }
     move(camera, PageCord[0], 120)
-    
+    loadPage(PageCord[0][3])
   }
 }
 
@@ -168,8 +172,12 @@ function addStar(origin){
   scene.add(star)
 }
 
-document.getElementById("left").onclick = function() {switchPlanet("left")};
-document.getElementById("right").onclick = function() {switchPlanet("right")};
+function test(){
+  console.log("test")
+}
+
+document.getElementById("left").onclick = function() {switchPlanet("left")}
+document.getElementById("right").onclick = function() {switchPlanet("right")}
 scene.background = spaceTexture
 
 run()
