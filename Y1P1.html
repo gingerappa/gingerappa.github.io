@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <script type="module" src="/test.js"></script>
+  </head>
+  <body>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <div class="title">
+        <h1>Camera to text</h1>
+    </div>
+    <main style="width: 99%;height: 99%">
+      <div style="display: flex;margin-top: 15rem;margin-left: 6rem;margin-right: 6rem;flex-wrap: wrap;justify-content: space-between;gap: 1rem;">
+        <div>
+          <img src="img/Y1P1I1.PNG" alt="Image of the code" style="width: 800px;height: 430px;">
+        </div>
+        <div>
+          <p style="color: #d6d6d6;">
+            A small program I made for fun in my spare time,<br> it’s a simple script that runs in the terminal <br>
+and turns the video input of your camara into text. <br>It does this by checking every pixel the <br>
+camera gives adding the rgb values together dividing <br>them by 47.875 (depends on how many <br>
+characters u want) which gives a number from 0 to <br> 15 where 0 is the least bright and 15 is the <br>
+most bright character. It gives the camara this really <br>cool effect that makes it seem like its ascii art
+          </p>
+        </div>
+      </div>
+    </main>
+    <div id="downB">
+      <button id="down" class="btn btn-dark">˅</button>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>

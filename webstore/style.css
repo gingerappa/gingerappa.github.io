@@ -1,0 +1,106 @@
+* {
+    font-family: Tahoma, sans-serif;
+    
+}
+
+.order{
+    border-radius: 4px;
+    background-color: white;
+    border: 2px solid #4CAF50;
+    transition-duration: 0.4s;
+}   
+
+.order:hover{
+    background-color: #4CAF50;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.remove{
+    border-radius: 4px;
+    background-color: #69a7f3;
+    border: 2px solid #69a7f3;
+    transition-duration: 0.4s;
+}   
+
+.remove:hover{
+    background-color: #5a9ae8;
+    border: 2px solid #5a9ae8;
+}
+
+
+#items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#card{
+    position: fixed;
+    right: 0;
+    
+}
+
+#cardHolder{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+#cardImgHolder{
+    display: flex;
+    justify-content: flex-end;
+    height: 53.2px;
+    padding: 10px;
+    background-color:#629de4;
+}
+
+#cardImg{
+    width: 50px;
+    height: 50px;
+}
+
+#cardNumber{
+    margin-right: 10px!important;
+    margin: 0px;
+}
+
+#reciept{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#receiptHolder{
+    padding: 10px;
+    background-color:rgb(88, 145, 214);
+}
+
+.CardItemPrice{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.noMargin{
+    margin: 1px;
+}
+
+.cardItem{
+    width: 30em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.item{
+    margin: 3px;
+    margin-bottom: 30px;
+}
+
+.img{
+    width: 400px;
+    height: 250px;
+}
+
+h2{
+    font-weight: bold;
+}

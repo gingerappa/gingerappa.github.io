@@ -25,6 +25,13 @@ h1 {
 main {
   position: absolute;
   padding: 0%;
+  width: 100vh;
+}
+p{
+  font-family: brandon-grotesque, sans-serif;
+  font-size: 21px;
+  background-color: #212529;
+  padding: 10px;
 }
 #leftB{
   position: absolute;
@@ -41,5 +48,21 @@ main {
   align-items: center;
   right: 0;
   top: calc(50vh - 20px);
+}
+#downB{
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  right: calc(50vw - 20px);
+  bottom: 0;
+}
+
+.title{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #212529;
+  padding: 20px;
 }
 

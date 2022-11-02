@@ -7,15 +7,19 @@ import { Vector3 } from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 const data = 
 {"html": 
   {
-    "homePage" : "<main class='container-fluid text-center'> <div class='row justify-content-end' style='margin-bottom: 250px'> <div class='col col-lg-6 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Thijs Swinkels</h1> </header> </div> </div> </main>", 
-    "Year1Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 1</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Project 1</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Project 2</h1> </button> </div> </main>",
-    "Year2Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 2</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Project 1</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Project 2</h1> </button> </div> </main>",
-    "test": ""
+    "homePage" : "<main class='container-fluid text-center'> <div class='row justify-content-end' style='margin-bottom: 250px'> <div class='col col-lg-6 d-inline p-2 text-bg-dark'> <header> <h1 style='font-family: brandon-grotesque, sans-serif;'>Thijs Swinkels</h1> </header> </div> </div> </main> <div id='leftB'> <button id='left' class='btn btn-dark'>&lt;</button> </div> <div id='rightB'> <button id='right' class='btn btn-dark'>&gt;</button> </div>", 
+    "Year1Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 1</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y1P1' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Camera to text</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y1P2' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Random dungeon 2</h1> </button> </div> </main> <div id='leftB'> <button id='left' class='btn btn-dark'>&lt;</button> </div> <div id='rightB'> <button id='right' class='btn btn-dark'>&gt;</button> </div>",
+    "Year2Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 2</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y2P1' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Webstore</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y2P2' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Compiler</h1> </button> </div> </main> <div id='leftB'> <button id='left' class='btn btn-dark'>&lt;</button> </div> <div id='rightB'> <button id='right' class='btn btn-dark'>&gt;</button> </div>",
+    "Y1P1": "<div class='title'> <h1>Camera to text</h1> </div> <main style='width: 99%;height: 99%'> <div style='display: flex;margin-top: 10rem;margin-left: 6rem;margin-right: 6rem;flex-wrap: wrap;justify-content: space-between;gap: 1rem;'> <div> <img src='img/Y1P1I1.PNG' alt='Image of the code' style='width: 800px;height: 430px;'> </div> <div> <p style='color: #d6d6d6;'> A small program I made for fun in my spare time,<br> it’s a simple script that runs in the terminal <br> and turns the video input of your camara into text. <br>It does this by checking every pixel the <br> camera gives adding the rgb values together dividing <br>them by 47.875 (depends on how many <br> characters u want) which gives a number from 0 to <br> 15 where 0 is the least bright and 15 is the <br> most bright character. It gives the camara this really <br>cool effect that makes it seem like its ascii art </p> </div> </div> </main> <div id='downB'> <button id='down' class='btn btn-dark'>˅</button> </div>",
+    "Y1P2": "<div class='title'> <h1>Random dungeon 2</h1> </div> <main style='width: 99%;height: 99%'> <div style='display: flex;margin-top: 10rem;margin-left: 6rem;margin-right: 6rem;flex-wrap: nowrap;justify-content: space-between;gap: 1rem;'> <div> <img src='img/Y1P2I1.PNG' alt='Image of the code' style='width: 800px;height: 430px;'> </div> <div> <p style='color: #d6d6d6;'> A successor to a program I made in high school. This program randomly generates a dungeon for the role playing game dungeons and dragons. It does this by first creating a starting area than on each side. It randomly decides what should go there if anything than it generates that and does the same for the thing it generated and repeat until there is noting to generate. I learned a lot from this project, many working with the tkinter library in python so I can make windows and a GUI </p> </div> </div> </main> <div id='downB'> <button id='down' class='btn btn-dark'>˅</button> </div>",
+    "Y2P1": "<div class='title'> <h1>Webstore</h1> </div> <main style='width: 99%;height: 99%'> <div style='display: flex;margin-top: 10rem;margin-left: 6rem;margin-right: 6rem;flex-wrap: nowrap;justify-content: space-between;gap: 1rem;'> <div> <a href='webstore/index.html'><img src='img/Y2P1I1.PNG' alt='Image of the code' style='width: 800px;height: 430px;'></a> </div> <div> <p style='color: #d6d6d6;'> a non functional webstore i made for school where I sell school. For this project we had to learn about arrays and learn how JavaScript works. I used a array with object in it for the items and when u want to order a item it puts in in a cart array. The main things I took a way from this project wasn’t the arrays. It was the html and css and using css instead of bootstrap felt so freeing and I had a lot of fun with this project </p> </div> </div> </main> <div id='downB'> <button id='down' class='btn btn-dark'>˅</button> </div>",
+    "Y2P2": "<div class='title'> <h1>Compiler</h1> </div> <main style='width: 99%;height: 99%'> <div style='display: flex;margin-top: 10rem;margin-left: 6rem;margin-right: 6rem;flex-wrap: nowrap;justify-content: space-between;gap: 1rem;'> <div> <img src='img/Y2P2I1.PNG' alt='Image of the code' style='width: 600px;height: 430px;'> </div> <div> <p style='color: #d6d6d6;'> A compiler that turn my own made coding language into Minecraft command so that it is easier to make datapack. What are datapack? Well a datapack in Minecraft is a folder in your Minecraft world folder that has a bunch of Minecraft commands like teleport or setblock. And u can do a bunch of stuff with it, my goal is to make the process of making a datapack clearer and easier. I am learning a lot of things from this project like using the current terms when naming variables and making clear functions </p> </div> </div> </main> <div id='downB'> <button id='down' class='btn btn-dark'>˅</button> </div>"
   }
 }
 
 //variables
 let running = false;
+let arrows = ["left", "right"]
 const body = document.getElementById("body");
 
 //textures
@@ -101,9 +105,28 @@ function getDifference(a, b){
   }
 }
 function loadPage(pageName){
+  arrows = []
   body.innerHTML = data.html[pageName]
-  document.getElementById("left").onclick = function() {switchPlanet("left")};
-  document.getElementById("right").onclick = function() {switchPlanet("right")};
+  const ProjectButtons = document.querySelectorAll('button[type="button"]');
+  ProjectButtons.forEach(element => {
+    element.onclick = function() {loadPage(element.id);move(camera, [camera.position.x+20, camera.position.y + 100, camera.position.z+20], 120)}
+  });
+  try{
+    document.getElementById("down").onclick = function() {switchPlanet("down")};
+    arrows.push("down")
+  }
+  catch{
+    //pass
+  }
+  try{
+    document.getElementById("left").onclick = function() {switchPlanet("left")};
+    arrows.push("left")
+    document.getElementById("right").onclick = function() {switchPlanet("right")};
+    arrows.push("right")
+  }
+  catch{
+    //pass
+  }
 }
 
 function move(object, newPosition, step){
@@ -136,7 +159,7 @@ function switchPlanet(directions){
       PageCord.unshift(PageCord[PageCord.length - 1])
       PageCord.splice(PageCord.length - 1, 1)
     }
-    else{
+    else if (directions == "right"){
       PageCord.push(PageCord[0])
       PageCord.splice(0, 1)
     }
@@ -146,15 +169,19 @@ function switchPlanet(directions){
 }
 
 window.addEventListener("keydown", function (event) {
+  console.log(arrows)
   if (event.defaultPrevented) {
     return; // Do nothing if the event was already processed
   }
   switch (event.key) {
     case "ArrowLeft":
-      switchPlanet("left")
+      if (arrows.includes("left")){switchPlanet("left")}
       break;
     case "ArrowRight":
-      switchPlanet("right")
+      if (arrows.includes("right")){switchPlanet("right")}
+      break;
+    case "ArrowDown":
+      if (arrows.includes("down")){switchPlanet("down")}
       break;
     default:
       return; // Quit when this doesn't handle the key event.
@@ -162,15 +189,6 @@ window.addEventListener("keydown", function (event) {
   event.preventDefault();
 }, true);
 
-function addStar(origin){
-  const star = new THREE.Mesh(
-    new THREE.SphereGeometry(0.25, 24, 24),
-    new THREE.MeshStandardMaterial({color: 0xffffff})
-  )
-  const [x, y, z] = [THREE.MathUtils.randFloat(0, 100)-origin[0], THREE.MathUtils.randFloat(0, 100)-origin[1], THREE.MathUtils.randFloat(0, 100)-origin[2]]
-  star.position.set(x,y,z)
-  scene.add(star)
-}
 
 function test(){
   console.log("test")
@@ -178,6 +196,7 @@ function test(){
 
 document.getElementById("left").onclick = function() {switchPlanet("left")}
 document.getElementById("right").onclick = function() {switchPlanet("right")}
+
 scene.background = spaceTexture
 
 run()
