@@ -8,9 +8,9 @@ const data =
 {"html": 
   {
     "en" : {
-      "homePage" : "<main class='container-fluid text-center'> <div class='row justify-content-end' style='margin-bottom: 250px'> <div class='col col-lg-6 d-inline p-2 text-bg-dark'> <header> <h1 style='font-family: brandon-grotesque, sans-serif;'>Thijs Swinkels</h1> </header> </div> </div> </main> <div id='leftB'> <button id='left' class='btn btn-dark'><img src='img/arrow left.png' alt='<'></button> </div> <div id='rightB'> <button id='right' class='btn btn-dark'><img src='img/arrow right.png' alt='>'></button> </div>", 
+      "homePage" : "<main class='container-fluid text-center'> <div class='row justify-content-end' style='margin-bottom: 250px'> <div class='col col-lg-6 d-inline p-2 text-bg-dark'> <header> <h1 style='font-family: brandon-grotesque, sans-serif;'>Thijs Swinkels</h1> </header> </div> </div> </main> <div id='rightB'> <button id='right' class='btn btn-dark'><img src='img/arrow right.png' alt='>'></button> </div>", 
       "Year1Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 1</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y1P1' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Camera to text</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y1P2' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Random dungeon 2</h1> </button> </div> </main> <div id='leftB'> <button id='left' class='btn btn-dark'><img src='img/arrow left.png' alt='<'></button> </div> <div id='rightB'> <button id='right' class='btn btn-dark'><img src='img/arrow right.png' alt='>'></button> </div>",
-      "Year2Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 2</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y2P1' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Webstore</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y2P2' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Compiler</h1> </button> </div> </main> <div id='leftB'> <button id='left' class='btn btn-dark'><img src='img/arrow left.png' alt='<'></button> </div> <div id='rightB'> <button id='right' class='btn btn-dark'><img src='img/arrow right.png' alt='>'></button> </div>",
+      "Year2Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 2</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y2P1' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Webstore</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y2P2' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Compiler</h1> </button> </div> </main> <div id='leftB'> <button id='left' class='btn btn-dark'><img src='img/arrow left.png' alt='<'></button> </div> ",
       "Y1P1": "<div class='title'> <h1>Camera to text</h1> </div> <main style='width: 99%;height: 99%'> <div style='display: flex;margin-top: 10rem;margin-left: 4rem;margin-right: 4rem;flex-wrap: nowrap;justify-content: space-around;gap: 1rem;'> <div> <img src='img/Y1P1I1.PNG' alt='Image of the code' style='width: 800px;height: 430px;'> </div> <div> <p style='color: #d6d6d6;'> A small program I made for fun in my spare time, it’s a simple script that runs in the terminal  and turns the video input of your camara into text. It does this by checking every pixel the  camera gives adding the rgb values together dividing them by 47.875 (depends on how many  characters u want) which gives a number from 0 to  15 where 0 is the least bright and 15 is the  most bright character. It gives the camara this really cool effect that makes it seem like its ascii art </p> </div> </div> </main> <div id='downB'> <button id='down' class='btn btn-dark'><IMG SRC='IMG/ARROW DOWN.PNG' ALT='˅'></button> </div>",
       "Y1P2": "<div class='title'> <h1>Random dungeon 2</h1> </div> <main style='width: 99%;height: 99%'> <div style='display: flex;margin-top: 10rem;margin-left: 4rem;margin-right: 4rem;flex-wrap: nowrap;justify-content: space-around;gap: 1rem;'> <div> <img src='img/Y1P2I1.PNG' alt='Image of the code' style='width: 800px;height: 430px;'> </div> <div> <p style='color: #d6d6d6;'> A successor to a program I made in high school. This program randomly generates a dungeon for the role playing game dungeons and dragons. It does this by first creating a starting area than on each side randomly decides what should go there if anything than it generates that and does the same for the things it generateds and repeat until there is noting to generate. I learned a lot from this project, mainly working with the tkinter library in python so I can make windows and a GUI </p> </div> </div> </main> <div id='downB'> <button id='down' class='btn btn-dark'><IMG SRC='IMG/ARROW DOWN.PNG' ALT='˅'></button> </div>",
       "Y2P1": "<div class='title'> <h1>Webstore</h1> </div> <main style='width: 99%;height: 99%'> <div style='display: flex;margin-top: 10rem;margin-left: 4rem;margin-right: 4rem;flex-wrap: nowrap;justify-content: space-around;gap: 1rem;'> <div> <a href='webstore/index.html'><img src='img/Y2P1I1.PNG' alt='Image of the code' style='width: 800px;height: 430px;'></a> </div> <div> <p style='color: #d6d6d6;'> a non functional webstore i made for school where I sell schools. For this project we had to learn about arrays and learn how JavaScript works. I used a array with object in it for the items and when u want to order a item it puts in in a cart array. The main things I took a way from this project wasn’t the arrays. It was the html and css and using css instead of bootstrap felt so freeing and I had a lot of fun with this project </p> </div> </div> </main> <div id='downB'> <button id='down' class='btn btn-dark'><IMG SRC='IMG/ARROW DOWN.PNG' ALT='˅'></button> </div>",
@@ -18,9 +18,9 @@ const data =
       "aboutMe": "<div class='title'> <h1>About me</h1> </div> <main style='width: 99%;height: 99%'> <div style='display: flex;margin-top: 10rem;margin-left: 4rem;margin-right: 4rem;flex-wrap: nowrap;justify-content: space-between;gap: 1rem;'> <div> <img src='img/me.png' alt='image of me' style='width: 500px;height: 540px;'> </div> <div> <p style='color: #d6d6d6;'> Hey, I am Thijs Swinkels. I am 17 years old and I study at Sint Lucas. I have a passion for programming especially python. I have always messing around with projects and now that I am studying at Sint Lucas I can turn it into more than a passion.<br><br>  On my portfolio page u can see some of the projects I made for passion or for school. This page might look confusing with all of the planets but its suppose to represent my journey through computer programming where every planet is a new turning point. Will you be the next planet? </p> <div style='display:flex;justify-content: space-evenly;'> <a href='https://discordapp.com/users/353833879007789057'><img src='img/discordLogo.png' alt='discord logo' style='width: 50px;height: 50px'></a> <a href='https://github.com/gingerappa'><img src='img/githubLogo.png' alt='github logo' style='width: 50px;height: 50px'></a> <a href='mailto:toriko65swinkels@gmail.com'><img src='img/mailLogo.png' alt='mail icon' style='width: 50px;height: 50px'></a> </div> </div> </div> </main> <div id='downB'> <button id='down' class='btn btn-dark'><IMG SRC='IMG/ARROW DOWN.PNG' ALT='˅'></button> </div>"
     },
     "nl" : {
-      "homePage" : "<main class='container-fluid text-center'> <div class='row justify-content-end' style='margin-bottom: 250px'> <div class='col col-lg-6 d-inline p-2 text-bg-dark'> <header> <h1 style='font-family: brandon-grotesque, sans-serif;'>Thijs Swinkels</h1> </header> </div> </div> </main> <div id='leftB'> <button id='left' class='btn btn-dark'><img src='img/arrow left.png' alt='<'></button> </div> <div id='rightB'> <button id='right' class='btn btn-dark'><img src='img/arrow right.png' alt='>'></button> </div>", 
+      "homePage" : "<main class='container-fluid text-center'> <div class='row justify-content-end' style='margin-bottom: 250px'> <div class='col col-lg-6 d-inline p-2 text-bg-dark'> <header> <h1 style='font-family: brandon-grotesque, sans-serif;'>Thijs Swinkels</h1> </header> </div> </div> </main> <div id='rightB'> <button id='right' class='btn btn-dark'><img src='img/arrow right.png' alt='>'></button> </div>", 
       "Year1Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 1</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y1P1' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Camera to text</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y1P2' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Random dungeon 2</h1> </button> </div> </main> <div id='leftB'> <button id='left' class='btn btn-dark'><img src='img/arrow left.png' alt='<'></button> </div> <div id='rightB'> <button id='right' class='btn btn-dark'><img src='img/arrow right.png' alt='>'></button> </div>",
-      "Year2Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 2</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y2P1' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Webstore</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y2P2' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Compiler</h1> </button> </div> </main> <div id='leftB'> <button id='left' class='btn btn-dark'><img src='img/arrow left.png' alt='<'></button> </div> <div id='rightB'> <button id='right' class='btn btn-dark'><img src='img/arrow right.png' alt='>'></button> </div>",
+      "Year2Home" : "<main class='container-fluid text-center d-grid gap-2'> <div class='row justify-content-end'> <div class='col col-lg-4 d-inline p-2 text-bg-dark'> <header class=''> <h1 style='font-family: brandon-grotesque, sans-serif;'>Year 2</h1> </header> </div> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y2P1' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Webstore</h1> </button> </div> <div class='col d-flex justify-content-end'> <button type='button' id='Y2P2' class='btn btn-secondary text-bg-secondary d-inline p-3'> <h2 style='font-family: brandon-grotesque, sans-serif;'>Compiler</h1> </button> </div> </main> <div id='leftB'> <button id='left' class='btn btn-dark'><img src='img/arrow left.png' alt='<'></button> </div> ",
       "Y1P1": "<div class='title'> <h1>Camera to text</h1> </div> <main style='width: 99%;height: 99%'> <div style='display: flex;margin-top: 10rem;margin-left: 4rem;margin-right: 4rem;flex-wrap: nowrap;justify-content: space-between;gap: 1rem;'> <div> <img src='img/Y1P1I1.PNG' alt='Image of the code' style='width: 800px;height: 430px;'> </div> <div> <p style='color: #d6d6d6;'> Een klein programma dat ik in mijn vrije tijd voor de lol heb gemaakt,  het is een eenvoudig programma dat in de terminal werkt en zet de video-invoer van je camera om in tekst characters. Het doet dit door elke pixel te controleren die camera geeft. Het optellen van de rgb-waarden van de pixel ze te delen door 47,875 (afhankelijk van hoeveel tekens die je wilt) dat een  getal van 0 tot 15 geeft, waarbij 0 het minst helder is en 15 het meest heldere karakter. Het geeft de camara dit echt coole effect waardoor het lijkt op ascii art </p> </div> </div> </main> <div id='downB'> <button id='down' class='btn btn-dark'><IMG SRC='IMG/ARROW DOWN.PNG' ALT='˅'></button> </div>",
       "Y1P2": "<div class='title'> <h1>Random dungeon 2</h1> </div> <main style='width: 99%;height: 99%'> <div style='display: flex;margin-top: 10rem;margin-left: 4rem;margin-right: 4rem;flex-wrap: nowrap;justify-content: space-between;gap: 1rem;'> <div> <img src='img/Y1P2I1.PNG' alt='Image of the code' style='width: 700px;height: 400px;'> </div> <div> <p style='color: #d6d6d6;'> Een opvolger van een programma dat ik op de middelbare school heb gemaakt. Dit programma genereert willekeurig een dungeons voor het rollenspel dungeons and dragons. Het doet dit door eerst een startgebied te creëren dan aan elke kant beslist willekeurig wat er moet komen (of niks) dan genereert het dat en doet hetzelfde voor het gegenereerde en herhaalt totdat er niks meer moet worden gegenereerd. ik heb veel geleerd van dit project, voornamelijk werken met de tkinter library in python, zodat ik vensters met een GUI kan maken </p> </div> </div> </main> <div id='downB'> <button id='down' class='btn btn-dark'><IMG SRC='IMG/ARROW DOWN.PNG' ALT='˅'></button> </div>",
       "Y2P1": "<div class='title'> <h1>Webstore</h1> </div> <main style='width: 99%;height: 99%'> <div style='display: flex;margin-top: 10rem;margin-left: 4rem;margin-right: 4rem;flex-wrap: nowrap;justify-content: space-around;gap: 1rem;'> <div> <a href='webstore/index.html'><img src='img/Y2P1I1.PNG' alt='Image of the code' style='width: 800px;height: 430px;'></a> </div> <div> <p style='color: #d6d6d6;'> een niet functionele webwinkel die ik heb gemaakt voor school waar ik schoolen verkoop. Voor dit project moesten we leren over arrays en leeren hoe JavaScript werkt. Ik heb een array met objecten erin gebruikt voor de items en wanneer je een item wilt bestellen dan word dat item in een andere array geplaatst. De belangrijkste dingen die ik uit dit project heb gehaald, waren niet de arrays. Het was de html en css en het gebruik van css in plaats van bootstrap, dat voelde zo bevrijdend en ik had veel veel plezier met dit project </p> </div> </div> </main> <div id='downB'> <button id='down' class='btn btn-dark'><IMG SRC='IMG/ARROW DOWN.PNG' ALT='˅'></button> </div>",
@@ -32,7 +32,7 @@ const data =
 
 //variables
 let running = false;
-let arrows = ["left", "right"]
+let arrows = ["right"]
 let lang = "en"
 let currentPage = "homePage"
 const body = document.getElementById("body");
@@ -125,7 +125,7 @@ function loadPage(pageName){
   body.innerHTML = data.html[lang][pageName]
   const ProjectButtons = document.querySelectorAll('button[type="button"]');
   ProjectButtons.forEach(element => {
-    element.onclick = function() {loadPage(element.id);move(camera, [camera.position.x+20, camera.position.y + 20, camera.position.z+20], 120)}
+    element.onclick = function() {loadPage(element.id);movecam(camera, [camera.position.x+20, camera.position.y + 20, camera.position.z+20], 120)}
   });
   try{
     document.getElementById("down").onclick = function() {switchPlanet("down")};
@@ -137,6 +137,11 @@ function loadPage(pageName){
   try{
     document.getElementById("left").onclick = function() {switchPlanet("left")};
     arrows.push("left")
+  }
+  catch{
+    //pass
+  }
+  try{
     document.getElementById("right").onclick = function() {switchPlanet("right")};
     arrows.push("right")
   }
@@ -145,27 +150,27 @@ function loadPage(pageName){
   }
 }
 
-function move(object, newPosition, step){
+function movecam(object, newPosition, step){
   var positionObject = object.position
   var steps = [getDifference(positionObject.x, newPosition[0])/step, getDifference(positionObject.y, newPosition[1])/step, getDifference(positionObject.z, newPosition[2])/step]
   var opacityStep = 100/step
   var opacity = 0
   var count = 0
   body.style.opacity = 0
-  function test(){
+  function move(){
     if(count <= step){
       var positionObject = object.position
       object.position.set(positionObject.x + steps[0], positionObject.y + steps[1], positionObject.z + steps[2])
       opacity += opacityStep
       body.style.opacity = `${opacity}%`
       count ++;
-      requestAnimationFrame(test)
+      requestAnimationFrame(move)
     }
     else{
       running = false
     }
   }
-  test()
+  move()
 }
 
 function switchPlanet(directions){
@@ -179,7 +184,7 @@ function switchPlanet(directions){
       PageCord.push(PageCord[0])
       PageCord.splice(0, 1)
     }
-    move(camera, PageCord[0], 120)
+    movecam(camera, PageCord[0], 120)
     loadPage(PageCord[0][3])
   }
 }
@@ -210,9 +215,8 @@ function test(){
   console.log("test")
 }
 
-document.getElementById("left").onclick = function() {switchPlanet("left")}
-document.getElementById("right").onclick = function() {switchPlanet("right")}
-document.getElementById("aboutMe").onclick = function() {loadPage("aboutMe");move(camera, [camera.position.x+20, camera.position.y + 20, camera.position.z+20], 120)}
+
+document.getElementById("aboutMe").onclick = function() {loadPage("aboutMe");movecam(camera, [camera.position.x+20, camera.position.y + 20, camera.position.z+20], 120)}
 document.getElementById("lang").onclick = function() {
   if (lang === "en"){
     lang = "nl"
@@ -223,7 +227,7 @@ document.getElementById("lang").onclick = function() {
   document.getElementById("langImg").src = `img/${lang}.png`
   loadPage(currentPage)
 }
-
+document.getElementById("right").onclick = function() {switchPlanet("right")}
 
 scene.background = spaceTexture
 
