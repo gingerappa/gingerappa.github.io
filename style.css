@@ -102,3 +102,11 @@ button:hover{
 #lang:hover{
   cursor: pointer;
 }
+
+.click{
+  transition: all .2s ease-in-out; 
+}
+
+.click:hover{
+  transform: scale(1.05); 
+}
