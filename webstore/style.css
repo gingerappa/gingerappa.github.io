@@ -104,3 +104,22 @@
 h2{
     font-weight: bold;
 }
+#downB{
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    right: calc(50vw - 20px);
+    bottom: 0;
+  }
+#down{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: Transparent !important;
+    border: none !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-radius: 0.325rem;
+}
+#down:hover{
+    background-color: rgba(68, 78, 89, 0.351) !important;
+}

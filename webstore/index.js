@@ -10,6 +10,13 @@ card = []
 oldCard = []
 cardOn = false
 
+let currentUrl = window.location.hash.replace("#", "");
+document.getElementById('down').onclick = function() {
+    window.location.pathname = ""
+    window.location.hash = `${currentUrl[0]}|${currentUrl[1]}`
+}
+
+
 function getPrice(int){
     StringPrice = ""
     int = int.toString().split('').reverse().join('').replaceAll(".", ",")
@@ -246,4 +253,5 @@ setInterval(function () {
     }
     oldCard = [].concat(card)
 })
+
 

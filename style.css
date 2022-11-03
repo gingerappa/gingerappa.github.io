@@ -88,9 +88,6 @@ button:hover{
   margin: 10px;
 }
 
-#aboutMe:hover{
-  cursor: pointer;
-}
 
 .lang{
   position: absolute;
@@ -99,14 +96,11 @@ button:hover{
   margin: 10px;
 }
 
-#lang:hover{
-  cursor: pointer;
-}
-
 .click{
   transition: all .2s ease-in-out; 
 }
 
 .click:hover{
   transform: scale(1.05); 
+  cursor: pointer;
 }
