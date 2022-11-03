@@ -33,6 +33,13 @@ p{
   background-color: #212529;
   padding: 10px;
 }
+button{
+  background-color: Transparent !important;
+  border: none !important;
+}
+button:hover{
+  background-color: rgba(68, 78, 89, 0.351) !important;
+}
 #leftB{
   position: absolute;
   display: flex;
@@ -58,7 +65,14 @@ p{
   right: calc(50vw - 20px);
   bottom: 0;
 }
-
+#down{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+#left, #right{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .title{
   position: absolute;
   top: 0;
