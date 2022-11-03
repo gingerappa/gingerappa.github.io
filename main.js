@@ -38,16 +38,7 @@ let lang = "en"
 let currentPage = "homePage"
 const body = document.getElementById("body");
 
-//load current page
-let currentUrl = window.location.href.split("#");
-if (window.location.href.includes("#")){
-  currentUrl = currentUrl[currentUrl.length-1]
-  console.log(currentUrl)
-  loadPage(currentUrl)
-}
-else{
-  currentUrl = "homePage"
-}
+
 
 //textures
 const spaceTexture = new THREE.TextureLoader().load('img/spaceTX.jpg')
@@ -106,6 +97,13 @@ scene.add(lightE, ambientLight)
 //const controls = new OrbitControls(camera, renderer.domElement)
 // controls.target = new Vector3 (10, 0, -4)
 
+function exists(arr, search) {
+  return arr.some(row => row.includes(search));
+}
+
+//load current page
+
+
 
 //main loop
 function run(){
@@ -132,9 +130,9 @@ function getDifference(a, b){
   }
 }
 function loadPage(pageName){
+  console.log(pageName)
   arrows = []
   currentPage = pageName
-  window.location.href = `#${pageName}`
   body.innerHTML = data.html[lang][pageName]
   const ProjectButtons = document.querySelectorAll('button[type="button"]');
   ProjectButtons.forEach(element => {
@@ -144,26 +142,27 @@ function loadPage(pageName){
     }
   });
   try{
-    document.getElementById("down").onclick = function() {switchPlanet("down")};
+    document.getElementById("down").onclick = function() {switchPlanet("down", true)};
     arrows.push("down")
   }
   catch{
     //pass
   }
   try{
-    document.getElementById("left").onclick = function() {switchPlanet("left")};
+    document.getElementById("left").onclick = function() {switchPlanet("left", true)};
     arrows.push("left")
   }
   catch{
     //pass
   }
   try{
-    document.getElementById("right").onclick = function() {switchPlanet("right")};
+    document.getElementById("right").onclick = function() {switchPlanet("right", true)};
     arrows.push("right")
   }
   catch{
     //pass
   }
+  window.location.hash = `${pageName}|${PageCord[0][3]}`
 }
 
 function movecam(object, newPosition, step){
@@ -183,13 +182,14 @@ function movecam(object, newPosition, step){
       requestAnimationFrame(move)
     }
     else{
+      object.position.set(newPosition[0], newPosition[1], newPosition[2])
       running = false
     }
   }
   move()
 }
 
-function switchPlanet(directions){
+function switchPlanet(directions, animation){
   if(!running){
     running = true
     if (directions == "left"){
@@ -200,8 +200,14 @@ function switchPlanet(directions){
       PageCord.push(PageCord[0])
       PageCord.splice(0, 1)
     }
-    movecam(camera, PageCord[0], 120)
-    loadPage(PageCord[0][3])
+    if (animation){
+      movecam(camera, PageCord[0], 120)
+      loadPage(PageCord[0][3])
+    }
+    else{
+      movecam(camera, PageCord[0], 1)
+      running = false
+    }
   }
 }
 
@@ -211,14 +217,14 @@ window.addEventListener("keydown", function (event) {
   }
   switch (event.key) {
     case "ArrowLeft":
-      if (arrows.includes("left")){switchPlanet("left")}
+      if (arrows.includes("left")){switchPlanet("left", true)}
       break;
     case "ArrowRight":
-      if (arrows.includes("right")){switchPlanet("right")}
+      if (arrows.includes("right")){switchPlanet("right", true)}
       break;
     case "Escape":
     case "ArrowDown":
-      if (arrows.includes("down")){switchPlanet("down")}
+      if (arrows.includes("down")){switchPlanet("down", true)}
       break;
     default:
       return; // Quit when this doesn't handle the key event.
@@ -243,7 +249,19 @@ document.getElementById("lang").onclick = function() {
   document.getElementById("langImg").src = `img/${lang}.png`
   loadPage(currentPage)
 }
-document.getElementById("right").onclick = function() {switchPlanet("right")}
+let currentUrl = window.location.hash.replace("#", "").split("|");
+if (Object.keys(data.html.en).indexOf(currentUrl[0]) > -1){
+  while(PageCord[0][3] != currentUrl[1]){
+    switchPlanet("right", false)
+  }
+  if(!exists(PageCord, currentUrl[0])){
+    movecam(camera, [camera.position.x+20, camera.position.y + 20, camera.position.z+20], 1)
+  }
+  loadPage(currentUrl[0])
+}
+else{
+  document.getElementById("right").onclick = function() {switchPlanet("right", true)}
+}
 
 scene.background = spaceTexture
 

@@ -88,9 +88,17 @@ button:hover{
   margin: 10px;
 }
 
+#aboutMe:hover{
+  cursor: pointer;
+}
+
 .lang{
   position: absolute;
   bottom: 0;
   left: 0;
   margin: 10px;
+}
+
+#lang:hover{
+  cursor: pointer;
 }
